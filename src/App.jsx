@@ -1,37 +1,28 @@
-import { useState } from "react";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Overview from "./pages/Overview";
 import Calendar from "./pages/Calendar";
-import Tasks from "./pages/Tasks";
-import { getProjects, getTasks, getCalendar } from "./api";
+import Root from "./pages/Root";
+import Timer from "./pages/Timer";
 
 import "./App.css";
 
-function Root() {
-  return <Outlet />;
-}
-
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <Root />,
-    // loader: getProjects,
+    //errorElement: <Error />
     children: [
       {
-        path: "overview",
+        path: "/",
         element: <Overview />,
-        loader: getProjects,
       },
       {
-        path: "tasks",
-        element: <Tasks />,
-        loader: getTasks,
+        path: "timer",
+        element: <Timer />,
       },
       {
         path: "calendar",
         element: <Calendar />,
-        loader: getCalendar,
-      },
+      }
     ],
   },
 ]);

@@ -1,21 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
+import Projects from "../components/Projects";
+import Tasks from "../components/Tasks";
 
-function Header(props) {
+function Header({ projects, tasks, title }) {
+
+  const [onProjects, setOnProjects] = useState(true);
+  const [onTasks, setOnTasks] = useState(false);
+
+  function handleTabClick(button) {
+
+    if (button === projects) {
+      setOnProjects(true)
+      setOnTasks(false)
+    } else {
+      setOnTasks(true)
+      setOnProjects(false)
+    }
+  }
+
   return (
     <header>
       <div className="header sticky top-0 bg-white shadow-md flex justify-center px-8 py-3 text-3xl">
-        <h1>{props.title}</h1>
+        <h1>{title}</h1>
       </div>
-      {props.buttonName1 || props.buttonName2 ? (
+      {projects || tasks ? (
         <nav id="tabs" className="flex justify-between">
-          <button className="w-full border-solid border-2 focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-3 pb-1 text-2xl">
-            {props.buttonName1}
+          <button
+            onClick={() => handleTabClick(projects)}
+            className="w-full border-solid border-2 focus:text-white focus:bg-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-3 pb-1 text-2xl"
+          >
+            {projects}
           </button>
-          <button className="w-full border-solid border-2 focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-3 pb-1 text-2xl">
-            {props.buttonName2}
+          <button
+            onClick={() => handleTabClick(tasks)}
+            className="w-full border-solid border-2 focus:text-white focus:bg-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-3 pb-1 text-2xl"
+          >
+            {tasks}
           </button>
         </nav>
       ) : null}
+      {
+        onProjects === true && onTasks === false ? <Projects /> : <Tasks />
+      }
     </header>
   );
 }

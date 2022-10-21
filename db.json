@@ -1,15 +1,5 @@
 {
-    "projects": [
-      { "id": 1, "name": "Skapa en hemsida", "color": "#4E0E9F" }
-    ],
-    "tasks": [
-      { "id": 1, "projectId": 1, "title": "Läsa genom Reacts nya dokumentation" },
-      { "id": 2, "projectId": 1, "title": "Läsa på om Tailwind CSS" }
-
-    ],
-    "timelogs": [
-      { "id": 1, "taskId": 1, "start": "2022-10-12T10:49:33.081Z", "end": "2022-10-12T10:49:33.081Z" },
-      { "id": 2, "taskId": 2, "start": "2022-10-12T10:49:33.081Z", "end": "2022-10-12T10:49:33.081Z" },
-      { "id": 3, "taskId": 2, "start": "2022-10-12T10:49:33.081Z", "end": "2022-10-12T10:49:33.081Z" }
-    ]
-  }
+  "projects": [],
+  "tasks": [],
+  "timelogs": []
+}
