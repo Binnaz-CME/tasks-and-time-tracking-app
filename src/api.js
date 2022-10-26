@@ -6,6 +6,11 @@ export async function getProjects() {
   return data;
 }
 
+export async function addProject(project) {
+  const { data } = await axios.post(`${API_URL}/projects`, project);
+  return data;
+}
+
 export async function deleteProject(id) {
   await axios.delete(`${API_URL}/projects/${id}`);
 }
@@ -16,15 +21,17 @@ export async function getTasks() {
 }
 
 export async function addTask(task) {
-  await axios.post(`${API_URL}/tasks`, task);
-}
-
-export async function getCalendar() {
-  const { data } = await axios.get(`${API_URL}/timelogs`);
+  const { data } = await axios.post(`${API_URL}/tasks`, task);
   return data;
 }
 
-export async function addProject(project) {
-  const { data } = await axios.post(`${API_URL}/projects`, project);
-  return data;
+export async function deleteTask(id) {
+  await axios.delete(`${API_URL}/tasks/${id}`);
 }
+
+// export async function getCalendar() {
+//   const { data } = await axios.get(`${API_URL}/timelogs`);
+//   return data;
+// }
+
+

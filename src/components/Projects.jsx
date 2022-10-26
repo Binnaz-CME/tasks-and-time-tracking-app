@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { addProject, deleteProject } from "../api";
 import { useProjectsContext } from "../context/ProjectsContext";
-import { AiOutlineClose } from "react-icons/ai";
+import Form from "./Form";
+import List from "./List";
 
 function Projects() {
-  const [state, setState] = useState({
+  const [inputState, setInputState] = useState({
     name: "",
     color: "",
   });
@@ -14,17 +15,17 @@ function Projects() {
 
   function handleChange(e) {
     const { name, value } = e.target;
-    setState({ ...state, [name]: value });
+    setInputState({ ...inputState, [name]: value });
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const newProject = await addProject(state);
+    const newProject = await addProject(inputState);
     dispatch({
       type: "add",
       ...newProject,
     });
-    setState({ ...state, name: "" });
+    setInputState({ ...inputState, name: "" });
   }
 
   function handleDelete(id) {
@@ -37,59 +38,12 @@ function Projects() {
 
   return (
     <section className="m-5">
-      <div>
-        {projects.map((project) => {
-          return (
-            <div
-              key={project.id}
-              className="bg-slate-100 shadow-md border-2 flex justify-between text-xl m-3 rounded"
-            >
-              <div className="flex">
-                <span
-                  style={{ backgroundColor: project.color }}
-                  className="px-3 w-2 rounded"
-                ></span>
-                <p className="m-3">{project.name}</p>
-              </div>
-              <button
-                onClick={() => handleDelete(project.id)}
-                className="bg-teal-500 px-2 hover:border-teal-500 rounded"
-              >
-                <AiOutlineClose color="white" size="1em" />
-              </button>
-            </div>
-          );
-        })}
-      </div>
-
-      <form onSubmit={handleSubmit}>
-        <div className="flex m-3">
-          <input
-            placeholder="Input project name"
-            className="grow h-12 border-2"
-            type="text"
-            name="name"
-            value={state.name}
-            onChange={handleChange}
-          />
-
-          <input
-            className="grow h-12"
-            type="color"
-            name="color"
-            value={state.color}
-            // defaultValue="#000000"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex flex-col">
-          <input
-            className="bg-teal-500 hover:bg-teal-400 text-white font-bold py-2 px-4 border-b-4 border-teal-700 hover:border-teal-500 rounded m-3 grow"
-            type="submit"
-            value="Add new project"
-          />
-        </div>
-      </form>
+      <List list={projects} handleDelete={handleDelete}/> 
+      <Form
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+        inputState={inputState}
+      />
     </section>
   );
 }

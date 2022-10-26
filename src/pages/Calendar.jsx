@@ -5,7 +5,7 @@ import Nav from "../components/Nav";
 function Calendar() {
   return (
     <div>
-      <Header title="History" />
+      <Header title="Calendar" />
       <Nav />
     </div>
   );

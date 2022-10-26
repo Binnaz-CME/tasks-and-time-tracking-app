@@ -1,5 +1,51 @@
 {
-  "projects": [],
-  "tasks": [],
+  "projects": [
+    {
+      "name": "läsa",
+      "color": "#9d0606",
+      "id": 2
+    },
+    {
+      "name": "träna",
+      "color": "#d67676",
+      "id": 3
+    },
+    {
+      "name": "laga",
+      "color": "#212121",
+      "id": 4
+    }
+  ],
+  "tasks": [
+    {
+      "name": "spring",
+      "color": "#808e8c",
+      "id": 3,
+      "projectId": 3
+    },
+    {
+      "name": "vila",
+      "color": "#808e8c",
+      "id": 4,
+      "projectId": 3
+    },
+    {
+      "name": "sjfnskd",
+      "color": "#d31d1d",
+      "id": 5
+    },
+    {
+      "name": "hejsan",
+      "color": "#be4646",
+      "projectId": 3,
+      "id": 6
+    },
+    {
+      "name": "boken",
+      "color": "#000000",
+      "projectId": 2,
+      "id": 7
+    }
+  ],
   "timelogs": []
 }
