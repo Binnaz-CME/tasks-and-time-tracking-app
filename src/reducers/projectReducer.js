@@ -1,8 +1,5 @@
 export function projectReducer(state, action) {
-
   const { type, ...params } = action;
-
-  console.log("action:", action, 'params:', params)
 
   switch (type) {
     case "initialize":
@@ -18,9 +15,6 @@ export function projectReducer(state, action) {
 
 export function tasksReducer(state, action) {
   const { type, ...params } = action;
-
-  console.log("action:", action, 'params:', params)
-
 
   switch (type) {
     case "initialize":

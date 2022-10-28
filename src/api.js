@@ -29,9 +29,17 @@ export async function deleteTask(id) {
   await axios.delete(`${API_URL}/tasks/${id}`);
 }
 
-// export async function getCalendar() {
-//   const { data } = await axios.get(`${API_URL}/timelogs`);
-//   return data;
-// }
+export async function getTimelogs() {
+  const { data } = await axios.get(`${API_URL}/timelogs`);
+  return data;
+}
 
+export async function addTimelog(timelog) {
+  const { data } = await axios.post(`${API_URL}/timelogs`, timelog);
+  return data;
+}
 
+export async function getTimelog(id) {
+  const { data } = await axios.get(`${API_URL}/timelogs/${id}`);
+  return data;
+}

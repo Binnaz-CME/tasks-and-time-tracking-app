@@ -20,6 +20,7 @@ export function TasksProvider({ children }) {
         type: "initialize",
         payload: initial,
       });
+      console.log(initial)
     }
     data();
   }, []);

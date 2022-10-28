@@ -7,10 +7,10 @@ import { TasksProvider } from "./context/TasksContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-      <ProjectsProvider>
-        <TasksProvider>
-          <App />
-        </TasksProvider>
-      </ProjectsProvider>
+    <ProjectsProvider>
+      <TasksProvider>
+        <App />
+      </TasksProvider>
+    </ProjectsProvider>
   </React.StrictMode>
 );
