@@ -22,7 +22,7 @@ function TimerPage() {
     setStartTime(DateTime.now());
     const startTimestamp = DateTime.now().toISO();
     const start = DateTime.now(startTimestamp).toLocaleString(
-      DateTime.TIME_24_WITH_SECONDS
+      DateTime.DATETIME_SHORT
     );
 
     setTime({ start, ...time });
@@ -33,7 +33,7 @@ function TimerPage() {
 
     const stopTimestamp = DateTime.now().toISO();
     const stop = DateTime.now(stopTimestamp).toLocaleString(
-      DateTime.TIME_24_WITH_SECONDS
+      DateTime.DATETIME_SHORT
     );
 
     setTime({ stop });
