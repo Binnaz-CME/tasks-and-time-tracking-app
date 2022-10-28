@@ -8,10 +8,10 @@
 `npm run backend`
 
 ### NPM packages used:
-- Vite: 
-- React Router Dom: for routing pruposes
+- React Router Dom: for routing pruposes.
 - Axios: to fetch/post data to json-server.
 - Tailwind CSS: CSS styling framework.
 - React Icons: import of icons.
 - JSON-server: a development server for easy set-up of a backend. 
-- Nano ID: creates unique id's for backend.
+- Luxon: used for DateTime conversion.
+- React Icons: Used to import icons.
