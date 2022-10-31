@@ -21,7 +21,6 @@ function Calendar() {
 
   async function handleDelete(id) {
     await deleteTimelog(id);
-
   }
 
   const filtered = useMemo(() => {

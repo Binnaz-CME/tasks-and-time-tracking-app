@@ -1,51 +1,33 @@
 {
   "projects": [
     {
-      "name": "läsa",
-      "color": "#9d0606",
-      "id": 2
-    },
-    {
-      "name": "träna",
-      "color": "#d67676",
-      "id": 3
-    },
-    {
-      "name": "laga",
-      "color": "#212121",
-      "id": 4
+      "name": "Träna",
+      "color": "#e2abab",
+      "id": 1
     }
   ],
   "tasks": [
     {
-      "name": "spring",
-      "color": "#808e8c",
-      "id": 3,
-      "projectId": 3
+      "name": "Hoppa",
+      "color": "#ab9b9b",
+      "projectId": 1,
+      "id": 1
     },
     {
-      "name": "vila",
-      "color": "#808e8c",
-      "id": 4,
-      "projectId": 3
-    },
-    {
-      "name": "sjfnskd",
-      "color": "#d31d1d",
-      "id": 5
-    },
-    {
-      "name": "hejsan",
-      "color": "#be4646",
-      "projectId": 3,
-      "id": 6
-    },
-    {
-      "name": "boken",
-      "color": "#000000",
-      "projectId": 2,
-      "id": 7
+      "name": "Studsa",
+      "color": "#63bb9d",
+      "projectId": 1,
+      "id": 2
     }
   ],
-  "timelogs": []
+  "timelogs": [
+    {
+      "start": "2022-10-31T10:46:15.558+01:00",
+      "stop": "2022-10-31T10:46:21.210+01:00",
+      "name": "Hoppa",
+      "taskId": "1",
+      "time": "31 Oct 2022, 10:46:15 - 31 Oct 2022, 10:46:21",
+      "id": 1
+    }
+  ]
 }

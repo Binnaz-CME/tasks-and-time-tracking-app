@@ -18,7 +18,6 @@ function TimerPage() {
   const foundTask = tasks.find((task) => task.id === Number(id));
 
   function startTimer() {
-    
     setStartTime(DateTime.now());
     const startTimestamp = DateTime.now().toISO();
     const start = DateTime.now(startTimestamp).toLocaleString(
@@ -43,9 +42,9 @@ function TimerPage() {
       stop: stopTimestamp,
       name: foundTask.name,
       taskId: id,
-      time: `${time.start} - ${stop}`
+      time: `${time.start} - ${stop}`,
     };
-    
+
     setLoading(true);
     addTimelog(log).then(() => {
       setLoading(false);
@@ -55,7 +54,7 @@ function TimerPage() {
 
   function resetTime() {
     setTime({});
-    setRenderTime("")
+    setRenderTime("");
   }
 
   useEffect(() => {
@@ -72,7 +71,6 @@ function TimerPage() {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
     };
-
   }, [startTime]);
 
   return (
