@@ -43,3 +43,7 @@ export async function getTimelog(id) {
   const { data } = await axios.get(`${API_URL}/timelogs/${id}`);
   return data;
 }
+
+export async function deleteTimelog(id) {
+  await axios.delete(`${API_URL}/timelogs/${id}`);
+}

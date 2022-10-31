@@ -22,10 +22,10 @@ function TimerPage() {
     setStartTime(DateTime.now());
     const startTimestamp = DateTime.now().toISO();
     const start = DateTime.now(startTimestamp).toLocaleString(
-      DateTime.DATETIME_SHORT
+      DateTime.DATETIME_MED_WITH_SECONDS
     );
 
-    setTime({ start, ...time });
+    setTime({ start });
   }
 
   async function stopTimer() {
@@ -33,17 +33,19 @@ function TimerPage() {
 
     const stopTimestamp = DateTime.now().toISO();
     const stop = DateTime.now(stopTimestamp).toLocaleString(
-      DateTime.DATETIME_SHORT
+      DateTime.DATETIME_MED_WITH_SECONDS
     );
 
-    setTime({ stop });
+    setTime({ ...time, stop });
 
     const log = {
       start: startTime,
       stop: stopTimestamp,
       name: foundTask.name,
       taskId: id,
+      time: `${time.start} - ${stop}`
     };
+    
     setLoading(true);
     addTimelog(log).then(() => {
       setLoading(false);
