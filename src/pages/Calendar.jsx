@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useMemo } from "react";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
-import { getTimelogs } from "../api";
+import { getTimelogs, deleteTimelog } from "../api";
+import { AiOutlineClose } from "react-icons/ai";
 
 function Calendar() {
   const [timelogs, setTimelogs] = useState([]);
@@ -11,12 +12,16 @@ function Calendar() {
     getTimelogs().then((res) => {
       setTimelogs(res);
     });
-  }, []);
+  }, [timelogs]);
 
   function handleChange(e) {
-    const date = e.target.value
-    console.log(date)
+    const date = e.target.value;
     setDate(date);
+  }
+
+  async function handleDelete(id) {
+    await deleteTimelog(id);
+
   }
 
   const filtered = useMemo(() => {
@@ -36,6 +41,12 @@ function Calendar() {
           <div key={task.id}>
             <p>{task.name}</p>
             <p>Time: {task.time}</p>
+            <button
+              onClick={() => handleDelete(task.id)}
+              className="bg-teal-500 px-2 hover:border-teal-500 rounded"
+            >
+              <AiOutlineClose color="white" size="1em" />
+            </button>
           </div>
         );
       })}
