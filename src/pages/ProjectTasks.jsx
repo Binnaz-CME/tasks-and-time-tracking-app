@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
-import { useTasksContext } from "../context/TasksContext";
-import { useProjectsContext } from "../context/ProjectsContext";
-import { deleteTask, addTask } from "../api";
-import Header from "../components/Header";
-import Nav from "../components/Nav";
-import Form from "../components/Form";
-import List from "../components/List";
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { useTasksContext } from '../context/TasksContext';
+import { useProjectsContext } from '../context/ProjectsContext';
+import { deleteTask, addTask } from '../api';
+import Header from '../components/Header';
+import Nav from '../components/Nav';
+import Form from '../components/Form';
+import List from '../components/List';
 
 function ProjectTasks() {
   const { id } = useParams();
@@ -17,8 +17,8 @@ function ProjectTasks() {
   const filteredTasks = tasks.filter((task) => task.projectId === Number(id));
 
   const [inputState, setInputState] = useState({
-    name: "",
-    color: "#968d8d",
+    name: '',
+    color: '#968d8d',
     projectId: Number(id),
   });
 
@@ -27,21 +27,21 @@ function ProjectTasks() {
     setInputState({ ...inputState, [name]: value });
   }
 
-  async function handleSubmit(e) {
+  async function handleSubmit() {
 
     const newTask = await addTask(inputState);
     dispatch({
-      type: "add",
+      type: 'add',
       ...newTask,
     });
 
-    setInputState({ ...inputState, name: "" });
+    setInputState({ ...inputState, name: '' });
   }
 
   function handleDelete(id) {
     deleteTask(id);
     dispatch({
-      type: "delete",
+      type: 'delete',
       id: id,
     });
   }

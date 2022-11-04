@@ -1,35 +1,34 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Overview from "./pages/Overview";
-import Calendar from "./pages/Calendar";
-import Root from "./pages/Root";
-import TimerPage from "./pages/TimerPage";
-import ProjectTasks from './pages/ProjectTasks'
-import Timer from "./components/Timer";
-import "./App.css";
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Overview from './pages/Overview';
+import Calendar from './pages/Calendar';
+import Root from './pages/Root';
+import TimerPage from './pages/TimerPage';
+import ProjectTasks from './pages/ProjectTasks';
+import Timer from './components/Timer';
 
 const router = createBrowserRouter([
   {
     element: <Root />,
-    //errorElement: <Error />
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Overview />,
       },
       {
-        path: "project/:id/timer/:id",
+        path: 'project/:id/timer/:id',
         element: <TimerPage />,
       },
       {
-        path: "calendar",
+        path: 'calendar',
         element: <Calendar />,
       },
       {
-        path: "project/:id",
+        path: 'project/:id',
         element: <ProjectTasks />,
       },
       {
-        path: "timer",
+        path: 'timer',
         element: <Timer />,
       }
     ],

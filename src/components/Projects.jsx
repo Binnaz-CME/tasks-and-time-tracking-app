@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { addProject, deleteProject } from "../api";
-import { useProjectsContext } from "../context/ProjectsContext";
-import Form from "./Form";
-import List from "./List";
+import React, { useState } from 'react';
+import { addProject, deleteProject } from '../api';
+import { useProjectsContext } from '../context/ProjectsContext';
+import Form from './Form';
+import List from './List';
 
 function Projects() {
   const [inputState, setInputState] = useState({
-    name: "",
-    color: "",
+    name: '',
+    color: '',
   });
 
   const { projects, dispatch } = useProjectsContext();
@@ -17,20 +17,20 @@ function Projects() {
     setInputState({ ...inputState, [name]: value });
   }
 
-  async function handleSubmit(e) {
+  async function handleSubmit() {
     
     const newProject = await addProject(inputState);
     dispatch({
-      type: "add",
+      type: 'add',
       ...newProject,
     });
-    setInputState({ ...inputState, name: "" });
+    setInputState({ ...inputState, name: '' });
   }
 
   function handleDelete(id) {
     deleteProject(id);
     dispatch({
-      type: "delete",
+      type: 'delete',
       id: id,
     });
   }

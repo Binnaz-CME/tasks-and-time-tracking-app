@@ -1,10 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
-import { useTasksContext } from "../context/TasksContext";
-import { useProjectsContext } from "../context/ProjectsContext";
-import { DateTime, Duration } from "luxon";
-import { addTimelog } from "../api";
-import Header from "./Header";
-import Nav from "./Nav";
+import React, { useState, useRef, useEffect } from 'react';
+import { useTasksContext } from '../context/TasksContext';
+import { useProjectsContext } from '../context/ProjectsContext';
+import { DateTime, Duration } from 'luxon';
+import { addTimelog } from '../api';
+import Header from './Header';
+import Nav from './Nav';
 
 function Timer() {
   const { tasks } = useTasksContext();
@@ -13,7 +13,7 @@ function Timer() {
   const [foundTask, setFoundTask] = useState({});
   const intervalRef = useRef();
   const [startTime, setStartTime] = useState(null);
-  const [renderTime, setRenderTime] = useState("");
+  const [renderTime, setRenderTime] = useState('');
   const [loading, setLoading] = useState(false);
   const [time, setTime] = useState({});
 
@@ -70,7 +70,7 @@ function Timer() {
 
   function resetTime() {
     setTime({});
-    setRenderTime("");
+    setRenderTime('');
   }
 
   useEffect(() => {
@@ -80,7 +80,7 @@ function Timer() {
     intervalRef.current = setInterval(() => {
       const elapsedTime = DateTime.now() - startTime;
       const formattedTime =
-        Duration.fromMillis(elapsedTime).toFormat("hh:mm:ss");
+        Duration.fromMillis(elapsedTime).toFormat('hh:mm:ss');
       setRenderTime(formattedTime);
     }, 100);
 
@@ -128,7 +128,7 @@ function Timer() {
               {renderTime}
             </p>
             <h5 className="px-5 m-2 rounded text-xl">
-              Start time:{" "}
+              Start time:{' '}
               <p className="italic px-5 m-2 rounded">{time.start}</p>
             </h5>
 

@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   MdOutlineTimer,
   MdOutlineHome,
   MdOutlineCalendarToday,
-} from "react-icons/md";
+} from 'react-icons/md';
 
 function Nav() {
   return (

@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useParams } from "react-router-dom";
-import Header from "../components/Header";
-import Nav from "../components/Nav";
-import { useTasksContext } from "../context/TasksContext";
-import { DateTime, Duration } from "luxon";
-import { addTimelog } from "../api";
+import React, { useState, useEffect, useRef } from 'react';
+import { useParams } from 'react-router-dom';
+import Header from '../components/Header';
+import Nav from '../components/Nav';
+import { useTasksContext } from '../context/TasksContext';
+import { DateTime, Duration } from 'luxon';
+import { addTimelog } from '../api';
 
 function TimerPage() {
   const { id } = useParams();
   const { tasks } = useTasksContext();
   const intervalRef = useRef();
   const [startTime, setStartTime] = useState(null);
-  const [renderTime, setRenderTime] = useState("");
+  const [renderTime, setRenderTime] = useState('');
   const [loading, setLoading] = useState(false);
   const [time, setTime] = useState({});
 
@@ -55,7 +55,7 @@ function TimerPage() {
 
   function resetTime() {
     setTime({});
-    setRenderTime("");
+    setRenderTime('');
   }
 
   useEffect(() => {
@@ -64,7 +64,7 @@ function TimerPage() {
     intervalRef.current = setInterval(() => {
       const elapsedTime = DateTime.now() - startTime;
       const formattedTime =
-        Duration.fromMillis(elapsedTime).toFormat("hh:mm:ss");
+        Duration.fromMillis(elapsedTime).toFormat('hh:mm:ss');
       setRenderTime(formattedTime);
     }, 100);
 

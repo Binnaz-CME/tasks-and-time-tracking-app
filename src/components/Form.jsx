@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import { CSSTransition } from "react-transition-group";
+import React, { useState, useRef } from 'react';
+import { CSSTransition } from 'react-transition-group';
 
 function Form({ handleSubmit, handleChange, inputState }) {
   const [showModal, setShowModal] = useState(false);
@@ -9,7 +9,7 @@ function Form({ handleSubmit, handleChange, inputState }) {
     e.preventDefault();
 
     if(!inputState.name) return;
-    handleSubmit()
+    handleSubmit();
   }
 
   return ( 

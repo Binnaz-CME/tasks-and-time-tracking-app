@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import Nav from "./Nav";
-import { addTask, deleteTask } from "../api";
-import { useTasksContext } from "../context/TasksContext";
-import Form from "./Form";
-import List from "./List";
+import React, { useState } from 'react';
+import Nav from './Nav';
+import { addTask, deleteTask } from '../api';
+import { useTasksContext } from '../context/TasksContext';
+import Form from './Form';
+import List from './List';
 
 function Tasks() {
   const [inputState, setInputState] = useState({
-    name: "",
-    color: "",
+    name: '',
+    color: '',
   });
 
 
   function handleChange(e) {
     const { name, value } = e.target;
     setInputState({ ...inputState, [name]: value });
-    console.log(inputState)
+    console.log(inputState);
   }
 
   async function handleSubmit(e) {
@@ -23,18 +23,18 @@ function Tasks() {
     const newTask = await addTask(inputState);
 
     dispatch({
-      type: "add",
+      type: 'add',
       ...newTask,
     });
 
-    setInputState({ ...inputState, name: "" });
+    setInputState({ ...inputState, name: '' });
   }
 
   function handleDelete(id) {
     deleteTask(id);
 
     dispatch({
-      type: "delete",
+      type: 'delete',
       id: id,
     });
   }

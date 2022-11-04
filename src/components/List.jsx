@@ -1,6 +1,6 @@
-import React from "react";
-import { AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 function List({ list, handleDelete }) {
   return (

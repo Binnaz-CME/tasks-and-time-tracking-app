@@ -1,18 +1,18 @@
-import React, { useEffect, useState, useMemo } from "react";
-import Header from "../components/Header";
-import Nav from "../components/Nav";
-import { getTimelogs, deleteTimelog } from "../api";
-import { AiOutlineClose } from "react-icons/ai";
+import React, { useEffect, useState, useMemo } from 'react';
+import Header from '../components/Header';
+import Nav from '../components/Nav';
+import { getTimelogs, deleteTimelog } from '../api';
+import { AiOutlineClose } from 'react-icons/ai';
 
 function Calendar() {
   const [timelogs, setTimelogs] = useState([]);
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState('');
 
   useEffect(() => {
     getTimelogs().then((res) => {
       setTimelogs(res);
     });
-  }, [timelogs]);
+  }, []);
 
   function handleChange(e) {
     const date = e.target.value;

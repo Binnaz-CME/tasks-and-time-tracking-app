@@ -1,12 +1,13 @@
+import React from 'react';
 import {
   createContext,
   useReducer,
   useContext,
   useMemo,
   useEffect,
-} from "react";
-import { getProjects } from "../api";
-import { projectReducer } from "../reducers/projectReducer";
+} from 'react';
+import { getProjects } from '../api';
+import { projectReducer } from '../reducers/projectReducer';
 
 export const ProjectsContext = createContext(null);
 
@@ -16,7 +17,7 @@ export function ProjectsProvider({ children }) {
     async function data() {
       const initial = await getProjects();
       dispatch({
-        type: "initialize",
+        type: 'initialize',
         payload: initial,
       });
     }
@@ -42,7 +43,7 @@ export function useProjectsContext() {
   const context = useContext(ProjectsContext);
 
   if (!context) {
-    throw new Error("useProjectsContext is outside of ProjectsProvider");
+    throw new Error('useProjectsContext is outside of ProjectsProvider');
   }
 
   return context;
