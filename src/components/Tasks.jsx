@@ -32,7 +32,7 @@ function Tasks() {
 
   function handleDelete(id) {
     deleteTask(id);
-    
+
     dispatch({
       type: "delete",
       id: id,

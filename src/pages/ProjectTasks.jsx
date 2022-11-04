@@ -29,7 +29,7 @@ function ProjectTasks() {
   }
 
   async function handleSubmit(e) {
-    e.preventDefault();
+
     const newTask = await addTask(inputState);
     dispatch({
       type: "add",

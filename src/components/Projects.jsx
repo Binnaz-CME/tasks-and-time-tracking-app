@@ -11,7 +11,6 @@ function Projects() {
   });
 
   const { projects, dispatch } = useProjectsContext();
-  // console.log("projects:", projects);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -19,7 +18,7 @@ function Projects() {
   }
 
   async function handleSubmit(e) {
-    e.preventDefault();
+    
     const newProject = await addProject(inputState);
     dispatch({
       type: "add",
@@ -38,7 +37,7 @@ function Projects() {
 
   return (
     <section className="m-5">
-      <List list={projects} handleDelete={handleDelete}/> 
+      <List list={projects} handleDelete={handleDelete} />
       <Form
         handleSubmit={handleSubmit}
         handleChange={handleChange}

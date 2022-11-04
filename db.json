@@ -9,6 +9,21 @@
       "name": "laga mat",
       "color": "#ab4f4f",
       "id": 2
+    },
+    {
+      "name": "Leka",
+      "color": "#9d94b8",
+      "id": 3
+    },
+    {
+      "name": "Baka",
+      "color": "#8be5ce",
+      "id": 4
+    },
+    {
+      "name": "städa",
+      "color": "#eff0a8",
+      "id": 5
     }
   ],
   "tasks": [
@@ -41,6 +56,30 @@
       "color": "#d76565",
       "projectId": 2,
       "id": 5
+    },
+    {
+      "name": "Kaka",
+      "color": "#968d8d",
+      "projectId": 4,
+      "id": 6
+    },
+    {
+      "name": "äppelkaka",
+      "color": "#968d8d",
+      "projectId": 4,
+      "id": 7
+    },
+    {
+      "name": "Dammsuga",
+      "color": "#dfc3c3",
+      "projectId": 5,
+      "id": 8
+    },
+    {
+      "name": "bädda",
+      "color": "#dfc3c3",
+      "projectId": 5,
+      "id": 9
     }
   ],
   "timelogs": [
@@ -97,6 +136,33 @@
       "time": "6 Nov 2022, 09:15:22 - 6 Nov 2022, 09:15:25",
       "color": "#54ab5a",
       "id": 13
+    },
+    {
+      "start": "2022-11-04T10:42:13.952+01:00",
+      "stop": "2022-11-04T10:43:02.307+01:00",
+      "name": "Kaka",
+      "taskId": "6",
+      "time": "4 Nov 2022, 10:42:13 - 4 Nov 2022, 10:43:02",
+      "color": "#968d8d",
+      "id": 17
+    },
+    {
+      "start": "2022-11-04T10:56:07.483+01:00",
+      "stop": "2022-11-04T10:56:10.265+01:00",
+      "name": "Dammsuga",
+      "taskId": "8",
+      "time": "4 Nov 2022, 10:56:07 - 4 Nov 2022, 10:56:10",
+      "color": "#dfc3c3",
+      "id": 18
+    },
+    {
+      "start": "2022-11-04T10:56:15.664+01:00",
+      "stop": "2022-11-04T10:56:18.032+01:00",
+      "name": "bädda",
+      "taskId": "9",
+      "time": "4 Nov 2022, 10:56:15 - 4 Nov 2022, 10:56:18",
+      "color": "#dfc3c3",
+      "id": 19
     }
   ]
 }

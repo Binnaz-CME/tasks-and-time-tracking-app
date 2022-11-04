@@ -43,7 +43,7 @@ function TimerPage() {
       name: foundTask.name,
       taskId: id,
       time: `${time.start} - ${stop}`,
-      color: foundTask.color
+      color: foundTask.color,
     };
 
     setLoading(true);
@@ -79,50 +79,40 @@ function TimerPage() {
       <Header title={foundTask.name} />
       <div
         key={foundTask.id}
-        className="bg-slate-100 shadow-md border-2  text-xl m-3 rounded"
+        style={{ backgroundColor: foundTask.color }}
+        className=" bg-slate-100 shadow-md border-2 m-3 rounded p-3"
       >
-        <div className="flex flex-col">
-          <p
-            style={{ backgroundColor: foundTask.color }}
-            className="px-3 rounded"
-          >
+        <div className="flex flex-col items-center">
+          <p className="p-8  m-2 rounded text-4xl font-bold text-white justify-center">
             {renderTime}
           </p>
-          <p
-            style={{ backgroundColor: foundTask.color }}
-            className="px-3 rounded"
-          >
-            Start time: {time.start}
-          </p>
+          <h5 className="px-5 m-2 rounded text-xl">Start time: <p className="italic px-5 m-2 rounded">{time.start}</p></h5>
 
-          <p
-            style={{ backgroundColor: foundTask.color }}
-            className="px-3 selection:rounded"
-          >
-            Stop time: {time.stop}
-          </p>
-
-          <button
-            onClick={startTimer}
-            className="bg-teal-500 px-2 hover:border-teal-500 rounded"
-            disabled={loading}
-          >
-            Start
-          </button>
-          <button
-            onClick={stopTimer}
-            className="bg-teal-500 px-2 hover:border-teal-500 rounded"
-            disabled={loading}
-          >
-            Stop
-          </button>
-          <button
-            onClick={resetTime}
-            className="bg-teal-500 px-2 hover:border-teal-500 rounded"
-            disabled={loading}
-          >
-            Reset
-          </button>
+          <h5 className="px-5 m-2 rounded text-xl">Stop time: <p className="italic px-5 m-2 rounded">{time.stop}</p></h5>
+          
+          <div className="flex m-2 p-3">
+            <button
+              onClick={startTimer}
+              className="bg-teal-500 p-3 m-1 hover:border-teal-500 text-white rounded"
+              disabled={loading}
+            >
+              Start
+            </button>
+            <button
+              onClick={stopTimer}
+              className="bg-teal-500 p-3 m-1 hover:border-teal-500 text-white rounded"
+              disabled={loading}
+            >
+              Stop
+            </button>
+            <button
+              onClick={resetTime}
+              className="bg-teal-500 p-3 m-1 hover:border-teal-500 text-white rounded"
+              disabled={loading}
+            >
+              Reset
+            </button>
+          </div>
         </div>
       </div>
 
