@@ -76,7 +76,7 @@ function Timer() {
   useEffect(() => {
     if (startTime === null) return;
     if (!foundTask.name) return;
-    
+
     intervalRef.current = setInterval(() => {
       const elapsedTime = DateTime.now() - startTime;
       const formattedTime =
@@ -93,26 +93,29 @@ function Timer() {
   return (
     <div>
       <Header title="Timer" />
+      <div className="flex justify-center p-3">
+        <label className="text-xl">Choose a project:</label>
+        <select name="projects" onChange={(e) => handleProjectsChange(e)}>
+          <option>--Options--</option>
+          {projects.map((project) => (
+            <option key={project.id} value={project.id}>
+              {project.name.toUpperCase()}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      <label>Choose a project:</label>
-      <select name="projects" onChange={(e) => handleProjectsChange(e)}>
-        <option value="">--Please choose an option--</option>
-        {projects.map((project) => (
-          <option key={project.id} value={project.id}>
-            {project.name.toUpperCase()}
-          </option>
-        ))}
-      </select>
-
-      <label>Choose a task:</label>
-      <select name="tasks" onChange={handleTasksChange}>
-        <option value="">--Please choose an option--</option>
-        {filteredTasks.map((task) => (
-          <option key={task.id} value={task.id}>
-            {task.name.toUpperCase()}
-          </option>
-        ))}
-      </select>
+      <div className="flex justify-center p-3">
+        <label className="text-xl">Choose a task:</label>
+        <select className="" name="tasks" onChange={handleTasksChange}>
+          <option>--Options--</option>
+          {filteredTasks.map((task) => (
+            <option key={task.id} value={task.id}>
+              {task.name.toUpperCase()}
+            </option>
+          ))}
+        </select>
+      </div>
 
       {foundTask ? (
         <div
