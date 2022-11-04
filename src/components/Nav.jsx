@@ -6,7 +6,6 @@ import {
   MdOutlineCalendarToday,
 } from "react-icons/md";
 
-//className="w-full h-screen"
 function Nav() {
   return (
     <div className="w-full h-12">

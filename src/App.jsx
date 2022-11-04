@@ -4,6 +4,7 @@ import Calendar from "./pages/Calendar";
 import Root from "./pages/Root";
 import TimerPage from "./pages/TimerPage";
 import ProjectTasks from './pages/ProjectTasks'
+import Timer from "./components/Timer";
 import "./App.css";
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "project/:id",
         element: <ProjectTasks />,
+      },
+      {
+        path: "timer",
+        element: <Timer />,
       }
     ],
   },

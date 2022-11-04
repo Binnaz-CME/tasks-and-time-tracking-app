@@ -14,4 +14,5 @@
 - React Icons: import of icons.
 - JSON-server: a development server for easy set-up of a backend. 
 - Luxon: used for DateTime conversion.
-- React Icons: Used to import icons.
+- React Icons: used to import icons.
+- React Transition Group: used for inputmodal.

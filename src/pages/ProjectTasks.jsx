@@ -25,7 +25,6 @@ function ProjectTasks() {
   function handleChange(e) {
     const { name, value } = e.target;
     setInputState({ ...inputState, [name]: value });
-    console.log(inputState);
   }
 
   async function handleSubmit(e) {

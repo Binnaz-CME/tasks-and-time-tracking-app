@@ -5,8 +5,6 @@ function Form({ handleSubmit, handleChange, inputState }) {
   const [showModal, setShowModal] = useState(false);
   const nodeRef = useRef(null);
 
-  console.log(inputState.name)
-
   function submit(e) {
     e.preventDefault();
 
