@@ -1,33 +1,102 @@
 {
   "projects": [
     {
-      "name": "Träna",
-      "color": "#e2abab",
+      "name": "träna",
+      "color": "#d9b4b4",
       "id": 1
+    },
+    {
+      "name": "laga mat",
+      "color": "#ab4f4f",
+      "id": 2
     }
   ],
   "tasks": [
     {
-      "name": "Hoppa",
-      "color": "#ab9b9b",
+      "name": "hoppa",
+      "color": "#7f4848",
       "projectId": 1,
       "id": 1
     },
     {
-      "name": "Studsa",
-      "color": "#63bb9d",
+      "name": "vila",
+      "color": "#3c6d9a",
       "projectId": 1,
       "id": 2
+    },
+    {
+      "name": "springa",
+      "color": "#54ab5a",
+      "projectId": 1,
+      "id": 3
+    },
+    {
+      "name": "spagetti",
+      "color": "#968d8d",
+      "projectId": 2,
+      "id": 4
+    },
+    {
+      "name": "nudlar",
+      "color": "#d76565",
+      "projectId": 2,
+      "id": 5
     }
   ],
   "timelogs": [
     {
-      "start": "2022-10-31T10:46:15.558+01:00",
-      "stop": "2022-10-31T10:46:21.210+01:00",
-      "name": "Hoppa",
+      "start": "2022-11-03T09:13:53.615+01:00",
+      "stop": "2022-11-03T09:13:57.399+01:00",
+      "name": "springa",
+      "taskId": "3",
+      "time": "3 Nov 2022, 09:13:53 - 3 Nov 2022, 09:13:57",
+      "color": "#54ab5a",
+      "id": 8
+    },
+    {
+      "start": "2022-11-04T09:14:21.596+01:00",
+      "stop": "2022-11-04T09:14:28.096+01:00",
+      "name": "hoppa",
       "taskId": "1",
-      "time": "31 Oct 2022, 10:46:15 - 31 Oct 2022, 10:46:21",
-      "id": 1
+      "time": "4 Nov 2022, 09:14:21 - 4 Nov 2022, 09:14:28",
+      "color": "#7f4848",
+      "id": 9
+    },
+    {
+      "start": "2022-11-04T09:14:47.661+01:00",
+      "stop": "2022-11-04T09:14:56.497+01:00",
+      "name": "vila",
+      "taskId": "2",
+      "time": "4 Nov 2022, 09:14:47 - 4 Nov 2022, 09:14:56",
+      "color": "#3c6d9a",
+      "id": 10
+    },
+    {
+      "start": "2022-11-04T09:15:01.277+01:00",
+      "stop": "2022-11-04T09:15:08.713+01:00",
+      "name": "springa",
+      "taskId": "3",
+      "time": "4 Nov 2022, 09:15:01 - 4 Nov 2022, 09:15:08",
+      "color": "#54ab5a",
+      "id": 11
+    },
+    {
+      "start": "2022-11-05T09:15:12.927+01:00",
+      "stop": "2022-11-05T09:15:19.629+01:00",
+      "name": "springa",
+      "taskId": "3",
+      "time": "5 Nov 2022, 09:15:12 - 5 Nov 2022, 09:15:19",
+      "color": "#54ab5a",
+      "id": 12
+    },
+    {
+      "start": "2022-11-06T09:15:22.376+01:00",
+      "stop": "2022-11-06T09:15:25.678+01:00",
+      "name": "springa",
+      "taskId": "3",
+      "time": "6 Nov 2022, 09:15:22 - 6 Nov 2022, 09:15:25",
+      "color": "#54ab5a",
+      "id": 13
     }
   ]
 }

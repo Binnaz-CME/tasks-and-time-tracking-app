@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         element: <Overview />,
       },
       {
-        path: "project/:id/timer",
+        path: "project/:id/timer/:id",
         element: <TimerPage />,
       },
       {

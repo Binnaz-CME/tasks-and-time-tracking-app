@@ -21,7 +21,7 @@ function Tasks() {
   async function handleSubmit(e) {
     e.preventDefault();
     const newTask = await addTask(inputState);
-    // console.log("newTask", newTask)
+
     dispatch({
       type: "add",
       ...newTask,
@@ -32,6 +32,7 @@ function Tasks() {
 
   function handleDelete(id) {
     deleteTask(id);
+    
     dispatch({
       type: "delete",
       id: id,

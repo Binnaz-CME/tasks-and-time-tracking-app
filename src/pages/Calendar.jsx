@@ -33,13 +33,13 @@ function Calendar() {
   return (
     <div>
       <Header title="Calendar" />
-      <input type="date" value={date} onChange={handleChange} />
+      <input className='flex m-3 text-xl shadow-md border-2 justify-center' type="date" value={date} onChange={handleChange} />
 
       {filtered.map((task) => {
         return (
-          <div key={task.id}>
-            <p>{task.name}</p>
-            <p>Time: {task.time}</p>
+          <div key={task.id} className="bg-slate-100 shadow-md border-2 flex justify-between text-xl m-3 rounded">
+            <p className="m-3 font-bold" style={{ color: task.color }} >{task.name.toUpperCase()}</p>
+            <p className="m-3 font-light italic text-sm">Time: {task.time}</p>
             <button
               onClick={() => handleDelete(task.id)}
               className="bg-teal-500 px-2 hover:border-teal-500 rounded"

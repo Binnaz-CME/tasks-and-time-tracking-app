@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTasksContext } from "../context/TasksContext";
 import { useProjectsContext } from "../context/ProjectsContext";
-import { AiOutlineClose } from "react-icons/ai";
-
+import { deleteTask, addTask } from "../api";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Form from "../components/Form";
 import List from "../components/List";
-import { deleteTask, addTask } from "../api";
 
 function ProjectTasks() {
   const { id } = useParams();
@@ -20,7 +18,7 @@ function ProjectTasks() {
 
   const [inputState, setInputState] = useState({
     name: "",
-    color: "#000000",
+    color: "#968d8d",
     projectId: Number(id),
   });
 

@@ -43,6 +43,7 @@ function TimerPage() {
       name: foundTask.name,
       taskId: id,
       time: `${time.start} - ${stop}`,
+      color: foundTask.color
     };
 
     setLoading(true);

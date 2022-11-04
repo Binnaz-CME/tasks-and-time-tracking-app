@@ -2,9 +2,7 @@ import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-
 function List({ list, handleDelete }) {
-
   return (
     <div>
       {list.map((listitem) => {
@@ -20,17 +18,17 @@ function List({ list, handleDelete }) {
                     style={{ backgroundColor: listitem.color }}
                     className="px-3 w-2 rounded"
                   ></span>
-                  <p className="m-3">{listitem.name}</p>
+                  <p className="m-3">{listitem.name.toUpperCase()}</p>
                 </div>
               </Link>
             ) : (
-              <Link to="timer">
+              <Link to={`timer/${listitem.id}`}>
                 <div className="flex">
                   <span
                     style={{ backgroundColor: listitem.color }}
                     className="px-3 w-2 rounded"
                   ></span>
-                  <p className="m-3">{listitem.name}</p>
+                  <p className="m-3">{listitem.name.toUpperCase()}</p>
                 </div>
               </Link>
             )}
