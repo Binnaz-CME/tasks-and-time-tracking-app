@@ -4,7 +4,6 @@ import { useTasksContext } from '../context/TasksContext';
 import { useProjectsContext } from '../context/ProjectsContext';
 import { deleteTask, addTask } from '../api';
 import Header from '../components/Header';
-import Nav from '../components/Nav';
 import Form from '../components/Form';
 import List from '../components/List';
 
@@ -55,7 +54,6 @@ function ProjectTasks() {
         handleChange={handleChange}
         inputState={inputState}
       />
-      <Nav />
     </div>
   );
 }

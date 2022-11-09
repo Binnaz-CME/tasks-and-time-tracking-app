@@ -18,8 +18,7 @@ function Tasks() {
     console.log(inputState);
   }
 
-  async function handleSubmit(e) {
-    e.preventDefault();
+  async function handleSubmit() {
     const newTask = await addTask(inputState);
 
     dispatch({

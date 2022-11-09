@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import Header from '../components/Header';
-import Nav from '../components/Nav';
 import { getTimelogs, deleteTimelog } from '../api';
 import { AiOutlineClose } from 'react-icons/ai';
 
@@ -49,8 +48,6 @@ function Calendar() {
           </div>
         );
       })}
-
-      <Nav />
     </div>
   );
 }

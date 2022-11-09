@@ -11,32 +11,31 @@ const router = createBrowserRouter([
   {
     element: <Root />,
     children: [
+      { 
+        index: true, 
+        path: '/', 
+        element: <Overview /> },
       {
-        path: '/',
-        element: <Overview />,
-      },
-      {
-        path: 'project/:id/timer/:id',
+        path: '/project/:id/timer/:id',
         element: <TimerPage />,
       },
       {
-        path: 'calendar',
+        path: '/calendar',
         element: <Calendar />,
       },
       {
-        path: 'project/:id',
+        path: '/project/:id',
         element: <ProjectTasks />,
       },
       {
-        path: 'timer',
+        path: '/timer',
         element: <Timer />,
-      }
+      },
     ],
   },
 ]);
 
 function App() {
-
   return <RouterProvider router={router} />;
 }
 
