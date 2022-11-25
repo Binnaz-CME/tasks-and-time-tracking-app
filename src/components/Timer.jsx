@@ -16,6 +16,7 @@ function Timer() {
   const [renderTime, setRenderTime] = useState('');
   const [loading, setLoading] = useState(false);
   const [time, setTime] = useState({});
+  const [elapsedTime, setElapsedTime]= useState(null);
 
   function handleProjectsChange(e) {
     const projectId = Number(e.target.value);
@@ -55,11 +56,14 @@ function Timer() {
     const log = {
       start: startTime,
       stop: stopTimestamp,
+      elapsedTime: elapsedTime,
       name: foundTask.name,
       taskId: foundTask.id,
       time: `${time.start} - ${stop}`,
       color: foundTask.color,
     };
+
+    console.log(log);
 
     setLoading(true);
     addTimelog(log).then(() => {
@@ -79,6 +83,7 @@ function Timer() {
 
     intervalRef.current = setInterval(() => {
       const elapsedTime = DateTime.now() - startTime;
+      setElapsedTime(elapsedTime);
       const formattedTime =
         Duration.fromMillis(elapsedTime).toFormat('hh:mm:ss');
       setRenderTime(formattedTime);

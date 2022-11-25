@@ -14,6 +14,7 @@ function TimerPage() {
   const [renderTime, setRenderTime] = useState('');
   const [loading, setLoading] = useState(false);
   const [time, setTime] = useState({});
+  const [elapsedTime, setElapsedTime]= useState(null);
 
   const foundTask = tasks.find((task) => task.id === Number(id));
 
@@ -30,8 +31,8 @@ function TimerPage() {
   async function stopTimer() {
     if (startTime === null) return;
 
-    const stopTimestamp = DateTime.now().toISO();
-    const stop = DateTime.now(stopTimestamp).toLocaleString(
+    const stopTime = DateTime.now().toISO();
+    const stop = DateTime.now(stopTime).toLocaleString(
       DateTime.DATETIME_MED_WITH_SECONDS
     );
 
@@ -39,12 +40,15 @@ function TimerPage() {
 
     const log = {
       start: startTime,
-      stop: stopTimestamp,
+      stop: stopTime,
+      elapsedTime: elapsedTime,
       name: foundTask.name,
       taskId: id,
       time: `${time.start} - ${stop}`,
       color: foundTask.color,
     };
+
+    console.log(log);
 
     setLoading(true);
     addTimelog(log).then(() => {
@@ -63,6 +67,7 @@ function TimerPage() {
 
     intervalRef.current = setInterval(() => {
       const elapsedTime = DateTime.now() - startTime;
+      setElapsedTime(elapsedTime);
       const formattedTime =
         Duration.fromMillis(elapsedTime).toFormat('hh:mm:ss');
       setRenderTime(formattedTime);

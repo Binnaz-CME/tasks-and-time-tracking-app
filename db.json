@@ -1,237 +1,176 @@
 {
   "projects": [
     {
-      "name": "träna",
-      "color": "#d9b4b4",
+      "name": "Städa",
+      "color": "#915050",
+      "hourlyRate": 239823,
       "id": 1
     },
     {
-      "name": "laga mat",
-      "color": "#ab4f4f",
+      "name": "Träna",
+      "color": "#5e5091",
+      "hourlyRate": 123123,
       "id": 2
     },
     {
-      "name": "Leka",
-      "color": "#9d94b8",
+      "name": "Kunskapskontroll",
+      "color": "#579150",
+      "hourlyRate": 213123,
       "id": 3
     },
     {
-      "name": "Baka",
-      "color": "#8be5ce",
+      "name": "Ringa",
+      "color": "#505b91",
+      "hourlyRate": 30000,
       "id": 4
-    },
-    {
-      "name": "städa",
-      "color": "#eff0a8",
-      "id": 5
     }
   ],
   "tasks": [
     {
-      "name": "hoppa",
-      "color": "#7f4848",
+      "name": "Dammsuga",
+      "color": "#968d8d",
       "projectId": 1,
       "id": 1
     },
     {
-      "name": "vila",
-      "color": "#3c6d9a",
+      "name": "Damma",
+      "color": "#aa5050",
       "projectId": 1,
       "id": 2
     },
     {
-      "name": "springa",
-      "color": "#54ab5a",
+      "name": "Bädda",
+      "color": "#aaa750",
       "projectId": 1,
       "id": 3
     },
     {
-      "name": "spagetti",
+      "name": "Hoppa",
       "color": "#968d8d",
       "projectId": 2,
       "id": 4
     },
     {
-      "name": "nudlar",
-      "color": "#d76565",
+      "name": "Springa",
+      "color": "#590d0d",
       "projectId": 2,
       "id": 5
     },
     {
-      "name": "Kaka",
-      "color": "#968d8d",
-      "projectId": 4,
+      "name": "Inputfält",
+      "color": "#6d4f4f",
+      "projectId": 3,
       "id": 6
     },
     {
-      "name": "äppelkaka",
-      "color": "#968d8d",
-      "projectId": 4,
+      "name": "Projektsida",
+      "color": "#401212",
+      "projectId": 3,
       "id": 7
     },
     {
-      "name": "Dammsuga",
-      "color": "#dfc3c3",
-      "projectId": 5,
+      "name": "Banken",
+      "color": "#8d64a0",
+      "projectId": 4,
       "id": 8
     },
     {
-      "name": "bädda",
-      "color": "#dfc3c3",
-      "projectId": 5,
+      "name": "Jobbet",
+      "color": "#64a099",
+      "projectId": 4,
       "id": 9
-    },
-    {
-      "name": "Bilar",
-      "color": "#a9b3c6",
-      "projectId": 3,
-      "id": 10
     }
   ],
   "timelogs": [
     {
-      "start": "2022-11-03T09:13:53.615+01:00",
-      "stop": "2022-11-03T09:13:57.399+01:00",
-      "name": "springa",
+      "start": "2022-11-22T09:21:53.710+01:00",
+      "stop": "2022-11-22T09:21:56.127+01:00",
+      "elapsedTime": 2323,
+      "name": "Dammsuga",
+      "taskId": "1",
+      "time": "22 Nov 2022, 09:21:53 - 22 Nov 2022, 09:21:56",
+      "color": "#968d8d",
+      "id": 1
+    },
+    {
+      "start": "2022-11-22T09:22:00.509+01:00",
+      "stop": "2022-11-22T09:22:03.343+01:00",
+      "elapsedTime": 2802,
+      "name": "Damma",
+      "taskId": "2",
+      "time": "22 Nov 2022, 09:22:00 - 22 Nov 2022, 09:22:03",
+      "color": "#aa5050",
+      "id": 2
+    },
+    {
+      "start": "2022-11-22T09:22:06.160+01:00",
+      "stop": "2022-11-22T09:22:09.291+01:00",
+      "elapsedTime": 3106,
+      "name": "Bädda",
       "taskId": "3",
-      "time": "3 Nov 2022, 09:13:53 - 3 Nov 2022, 09:13:57",
-      "color": "#54ab5a",
+      "time": "22 Nov 2022, 09:22:06 - 22 Nov 2022, 09:22:09",
+      "color": "#aaa750",
+      "id": 3
+    },
+    {
+      "start": "2022-11-22T09:22:34.757+01:00",
+      "stop": "2022-11-22T09:22:38.276+01:00",
+      "elapsedTime": 3505,
+      "name": "Hoppa",
+      "taskId": "4",
+      "time": "22 Nov 2022, 09:22:34 - 22 Nov 2022, 09:22:38",
+      "color": "#968d8d",
+      "id": 4
+    },
+    {
+      "start": "2022-11-05T09:22:55.722+01:00",
+      "stop": "2022-11-05T09:23:00.791+01:00",
+      "elapsedTime": 5003,
+      "name": "Springa",
+      "taskId": "5",
+      "time": "5 Nov 2022, 09:22:55 - 5 Nov 2022, 09:23:00",
+      "color": "#590d0d",
+      "id": 7
+    },
+    {
+      "start": "2022-08-22T09:23:40.107+01:00",
+      "stop": "2022-08-22T09:23:43.707+01:00",
+      "elapsedTime": 3502,
+      "name": "Inputfält",
+      "taskId": "6",
+      "time": "22 Aug 2022, 09:23:40 - 22 Aug 2022, 09:23:43",
+      "color": "#6d4f4f",
       "id": 8
     },
     {
-      "start": "2022-11-04T09:14:21.596+01:00",
-      "stop": "2022-11-04T09:14:28.096+01:00",
-      "name": "hoppa",
-      "taskId": "1",
-      "time": "4 Nov 2022, 09:14:21 - 4 Nov 2022, 09:14:28",
-      "color": "#7f4848",
+      "start": "2022-03-22T09:23:46.724+01:00",
+      "stop": "2022-03-22T09:23:51.190+01:00",
+      "elapsedTime": 4406,
+      "name": "Projektsida",
+      "taskId": "7",
+      "time": "22 Mar 2022, 09:23:46 - 22 Mar 2022, 09:23:51",
+      "color": "#401212",
       "id": 9
     },
     {
-      "start": "2022-11-04T09:14:47.661+01:00",
-      "stop": "2022-11-04T09:14:56.497+01:00",
-      "name": "vila",
-      "taskId": "2",
-      "time": "4 Nov 2022, 09:14:47 - 4 Nov 2022, 09:14:56",
-      "color": "#3c6d9a",
+      "start": "2022-07-22T09:24:22.206+01:00",
+      "stop": "2022-07-22T09:24:26.590+01:00",
+      "elapsedTime": 4305,
+      "name": "Banken",
+      "taskId": "8",
+      "time": "22 Nov 2022, 09:24:22 - 22 Nov 2022, 09:24:26",
+      "color": "#8d64a0",
       "id": 10
     },
     {
-      "start": "2022-11-04T09:15:01.277+01:00",
-      "stop": "2022-11-04T09:15:08.713+01:00",
-      "name": "springa",
-      "taskId": "3",
-      "time": "4 Nov 2022, 09:15:01 - 4 Nov 2022, 09:15:08",
-      "color": "#54ab5a",
-      "id": 11
-    },
-    {
-      "start": "2022-11-05T09:15:12.927+01:00",
-      "stop": "2022-11-05T09:15:19.629+01:00",
-      "name": "springa",
-      "taskId": "3",
-      "time": "5 Nov 2022, 09:15:12 - 5 Nov 2022, 09:15:19",
-      "color": "#54ab5a",
-      "id": 12
-    },
-    {
-      "start": "2022-11-06T09:15:22.376+01:00",
-      "stop": "2022-11-06T09:15:25.678+01:00",
-      "name": "springa",
-      "taskId": "3",
-      "time": "6 Nov 2022, 09:15:22 - 6 Nov 2022, 09:15:25",
-      "color": "#54ab5a",
-      "id": 13
-    },
-    {
-      "start": "2022-11-04T10:42:13.952+01:00",
-      "stop": "2022-11-04T10:43:02.307+01:00",
-      "name": "Kaka",
-      "taskId": "6",
-      "time": "4 Nov 2022, 10:42:13 - 4 Nov 2022, 10:43:02",
-      "color": "#968d8d",
-      "id": 17
-    },
-    {
-      "start": "2022-11-04T10:56:07.483+01:00",
-      "stop": "2022-11-04T10:56:10.265+01:00",
-      "name": "Dammsuga",
-      "taskId": "8",
-      "time": "4 Nov 2022, 10:56:07 - 4 Nov 2022, 10:56:10",
-      "color": "#dfc3c3",
-      "id": 18
-    },
-    {
-      "start": "2022-11-04T10:56:15.664+01:00",
-      "stop": "2022-11-04T10:56:18.032+01:00",
-      "name": "bädda",
+      "start": "2022-09-22T09:24:29.807+01:00",
+      "stop": "2022-09-22T09:24:34.923+01:00",
+      "elapsedTime": 40000,
+      "name": "Jobbet",
       "taskId": "9",
-      "time": "4 Nov 2022, 10:56:15 - 4 Nov 2022, 10:56:18",
-      "color": "#dfc3c3",
-      "id": 19
-    },
-    {
-      "start": "2022-11-04T11:00:52.086+01:00",
-      "stop": "2022-11-04T11:00:53.266+01:00",
-      "name": "Dammsuga",
-      "taskId": "8",
-      "time": "4 Nov 2022, 11:00:52 - 4 Nov 2022, 11:00:53",
-      "color": "#dfc3c3",
-      "id": 20
-    },
-    {
-      "start": "2022-11-04T11:49:31.443+01:00",
-      "stop": "2022-11-04T11:49:37.493+01:00",
-      "name": "Bilar",
-      "taskId": 10,
-      "time": "4 Nov 2022, 11:49:31 - 4 Nov 2022, 11:49:37",
-      "color": "#a9b3c6",
-      "id": 21
-    },
-    {
-      "start": "2022-11-04T11:53:40.960+01:00",
-      "stop": "2022-11-04T11:53:44.592+01:00",
-      "name": "vila",
-      "taskId": 2,
-      "time": "4 Nov 2022, 11:53:40 - 4 Nov 2022, 11:53:44",
-      "color": "#3c6d9a",
-      "id": 25
-    },
-    {
-      "start": "2022-11-04T12:03:01.846+01:00",
-      "stop": "2022-11-04T12:03:04.511+01:00",
-      "name": "springa",
-      "taskId": 3,
-      "time": "4 Nov 2022, 12:03:01 - 4 Nov 2022, 12:03:04",
-      "color": "#54ab5a",
-      "id": 26
-    },
-    {
-      "start": "2022-11-06T12:05:06.063+01:00",
-      "stop": "2022-11-06T12:05:09.462+01:00",
-      "name": "Bilar",
-      "taskId": 10,
-      "time": "6 Nov 2022, 12:05:06 - 6 Nov 2022, 12:05:09",
-      "color": "#a9b3c6",
-      "id": 27
-    },
-    {
-      "start": "2022-11-04T12:23:43.602+01:00",
-      "stop": "2022-11-04T12:23:47.599+01:00",
-      "name": "nudlar",
-      "taskId": "5",
-      "time": "4 Nov 2022, 12:23:43 - 4 Nov 2022, 12:23:47",
-      "color": "#d76565",
-      "id": 28
-    },
-    {
-      "start": "2022-11-09T09:13:25.698+01:00",
-      "stop": "2022-11-09T09:13:34.329+01:00",
-      "name": "vila",
-      "taskId": 2,
-      "time": "9 Nov 2022, 09:13:25 - 9 Nov 2022, 09:13:34",
-      "color": "#3c6d9a",
-      "id": 29
+      "time": "22 Nov 2022, 09:24:29 - 22 Nov 2022, 09:24:34",
+      "color": "#64a099",
+      "id": 11
     }
   ]
 }

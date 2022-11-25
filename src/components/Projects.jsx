@@ -8,6 +8,7 @@ function Projects() {
   const [inputState, setInputState] = useState({
     name: '',
     color: '',
+    hourlyRate: null,
   });
 
   const { projects, dispatch } = useProjectsContext();
@@ -18,7 +19,6 @@ function Projects() {
   }
 
   async function handleSubmit() {
-    
     const newProject = await addProject(inputState);
     dispatch({
       type: 'add',
